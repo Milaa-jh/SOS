@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="ligth">
+    <ion-title>Emergencia Duoc Uc</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="chat-header">
+    <div class="security-profile">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <span>Seguridad Duoc</span>
+    </div>
+  </div>
+
+  <div class="chat-container">
+    <div class="messages">
+      <div *ngFor="let message of messages" 
+           [ngClass]="{'message': true, 'user-message': message.isUser, 'security-message': !message.isUser}">
+        <div class="message-content">
+          {{ message.text }}
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="message-input">
+    <div class="input-container">
+      <ion-button fill="clear" class="emoji-button">
+        <ion-icon name="happy-outline"></ion-icon>
+      </ion-button>
+      
+      <ion-input
+        [(ngModel)]="newMessage"
+        placeholder="Message"
+        (keyup.enter)="sendMessage()"
+      ></ion-input>
+      
+      <ion-button fill="clear" (click)="sendMessage()" class="send-button">
+        <ion-icon name="send-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</ion-footer>

@@ -1,0 +1,94 @@
+ion-content {
+    --background: #1a1a1a;
+  }
+  
+  ion-title {
+    color: #f44848;
+    font-size: 19px;
+  }
+
+  ion-content {
+    --background: #1a1a1a; 
+  }
+  
+  .search-container {
+    padding: 10px;
+    background: #1a1a1a;
+  
+    .custom-searchbar {
+      --background: #232323;
+      --color: #f68989;
+      --placeholder-color: #666;
+      --icon-color: #f83b3b;
+      --clear-button-color: #f83b3b;
+      --border-radius: 8px;
+      --box-shadow: none;
+    }
+  }
+  
+  .contacts-container {
+    padding: 10px;
+    
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .contact-item {
+      background: #232323;
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+      
+      &:active {
+        transform: scale(0.98);
+        background-color: #2a2a2a;
+      }
+  
+      .contact-icon {
+        background: #f83b3b;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        ion-icon {
+          color: white;
+          font-size: 20px;
+        }
+      }
+  
+      .contact-info {
+        flex: 1;
+        
+        h3 {
+          margin: 0;
+          color: #f68989;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        
+        p {
+          margin: 4px 0 0;
+          color: #666;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
+  /* Estilos para el scrollbar */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  ion-content::part(scroll) {
+    scrollbar-width: none;
+  }
